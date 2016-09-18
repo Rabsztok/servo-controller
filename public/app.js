@@ -9,7 +9,7 @@ setRotation = function(rotation) {
 
     // -90deg == 0.450ms && 90deg == 2.450ms in 20ms period
     period = 20;
-    time = (rotation + 90) * 2 / 180 + 0.45;
+    time = 2.45 - (rotation + 90) * 2 / 180;
     percentage = (((rotation + 90) / 180 + 1) * 100) / period;
     $('.rotation').text(rotation + '°');
     $('.period').text(period + 'ms');
